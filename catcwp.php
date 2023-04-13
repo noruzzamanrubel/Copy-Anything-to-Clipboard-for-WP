@@ -85,3 +85,5 @@ function run_catcwp() {
 
 }
 run_catcwp();
+
+require_once plugin_dir_path( __FILE__ ) . 'functions.php';
