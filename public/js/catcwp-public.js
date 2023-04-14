@@ -5,8 +5,18 @@
 		jQuery(document).ready(function($) {
             $('.cacwp_text').on('click', function() {
                 // Get the text to copy
-                let text = $(this).text().trim();
-
+                let text = '';
+                let $element = $('#cacwp_text_element');
+                function myFunction() {
+                  let datalink = $element.attr('data-link');
+                  if (datalink != '') {
+                    text = datalink;
+                  } else {
+                    text = $element.attr('data-text');
+                  }
+                }
+                myFunction();
+                
                 // Create a temporary element to copy the text
                 let $tempElement = $('<textarea>');
                 $tempElement.val(text);
@@ -29,6 +39,7 @@
                 $tempElement.remove();
 
                 // Update the text and style
+                let originalText = $element.attr('data-text');
                 $(this).text('Copied');
                 $(this).css({
                     'color': 'green',
@@ -37,7 +48,7 @@
 
                 // Restore the original text and style after 2 seconds
                 setTimeout(function() {
-                    $(this).text(text);
+                    $(this).text(originalText);
                     $(this).css({
                         'color': '',
                         'cursor': 'pointer'
