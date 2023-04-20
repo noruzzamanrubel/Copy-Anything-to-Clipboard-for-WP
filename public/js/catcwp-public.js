@@ -8,9 +8,9 @@
                 let text = '';
                 let $element = $('#cacwp_text_element');
                 function myFunction() {
-                  let datalink = $element.attr('data-link');
-                  if (datalink != '') {
-                    text = datalink;
+                  let dataContent = $element.attr('data-content');
+                  if (dataContent != '') {
+                    text = dataContent;
                   } else {
                     text = $element.attr('data-text');
                   }
