@@ -3,7 +3,7 @@
 class CATCWP_Shortcode {
 
     public function shortcode_register() {
-        add_shortcode('copy_anything_wp', [$this, 'shortcode_generator']);
+        add_shortcode('copy', [$this, 'shortcode_generator']);
     }
     
     /**
@@ -21,7 +21,7 @@ class CATCWP_Shortcode {
         
         ob_start();
         ?>
-        <span class="cacwp_text" id="cacwp_text_element" title="Click to copy" data-content="<?php echo $content ?>" data-text="<?php echo $text; ?>" style="cursor: pointer; display: inline;"><?php echo $text; ?></span>
+        <span class="cacwp_text" title="Click to copy" data-content="<?php echo $content ?>" data-text="<?php echo $text; ?>" style="cursor: pointer; display: inline;"><?php echo $text; ?></span>
         <?php
         return ob_get_clean();
         

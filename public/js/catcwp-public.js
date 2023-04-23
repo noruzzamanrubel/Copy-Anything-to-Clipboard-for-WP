@@ -6,7 +6,7 @@
             $('.cacwp_text').on('click', function() {
                 // Get the text to copy
                 let text = '';
-                let $element = $('#cacwp_text_element');
+                let $element = $(this);
                 function myFunction() {
                   let dataContent = $element.attr('data-content');
                   if (dataContent != '') {
