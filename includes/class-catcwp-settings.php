@@ -55,7 +55,7 @@ class CACTWP_setting {
             'title'  => __( 'General Setting', 'catcwp' ),
             'fields' => array(
                 array(
-                    'id'    => 'Copy_clipboard_text',
+                    'id'    => 'Copy_clipboard_setting',
                     'type'  => 'text',
                     'title' => 'Copy Clipboard Text',
                     'default' => '20%off'
@@ -64,13 +64,39 @@ class CACTWP_setting {
         ) );
         CSF::createSection( $prefix, array(
             'parent' => $parent,
-            'title'  => __( ' Setting', 'catcwp' ),
+            'title'  => __( ' List of Items', 'catcwp' ),
             'fields' => array(
                 array(
-                    'id'    => 'opt-texts',
-                    'type'  => 'text',
-                    'title' => 'Simple Text',
-                ),
+                    'id'        => 'Copy_clipboard_lists',
+                    'type'      => 'repeater',
+                    // 'title'     => 'Add New',
+                    'button_title'     => 'Add New',
+                    'fields'    => array(
+                    array(
+                        'id'    => 'Copy_clipboard_selector',
+                        'type'  => 'text',
+                        'title' => 'Selector',
+                        ),
+                      
+                      array(
+                        'id'    => 'Copy_clipboard_text',
+                        'type'  => 'text',
+                        'title' => 'Text',
+                      ),
+                  
+                      array(
+                        'id'    => 'Copy_clipboard_content',
+                        'type'  => 'textarea',
+                        'title' => 'Content',
+                      ),
+                      array(
+                        'id'    => 'Copy_clipboard_color',
+                        'type'    => 'color',
+                        'title'   => 'Color',
+                        'default' => 'black'
+                      ),
+                    )
+                  ),                  
             ),
         ) );
     }
