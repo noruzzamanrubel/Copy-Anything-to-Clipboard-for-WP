@@ -230,10 +230,10 @@ class CATCWP_Shortcode {
                 border-color: <?php echo $custom_border_color; ?>;
                 border-style: <?php echo $custom_border_style; ?>;
 
-                border-top-left-radius:     <?php echo esc_html($custom_border_radius_top); ?>px;
-                border-top-right-radius:    <?php echo esc_html($custom_border_radius_right); ?>px;
-                border-bottom-right-radius: <?php echo esc_html($custom_border_radius_bottom); ?>px;
-                border-bottom-left-radius:  <?php echo esc_html($custom_border_radius_left); ?>px;
+                border-top-left-radius:     <?php echo $custom_border_radius_top; ?>px;
+                border-top-right-radius:    <?php echo $custom_border_radius_right; ?>px;
+                border-bottom-right-radius: <?php echo $custom_border_radius_bottom; ?>px;
+                border-bottom-left-radius:  <?php echo $custom_border_radius_left; ?>px;
             }
             span.cacwp_text:hover {
                 background-color: <?php echo $custom_bg_hover_color; ?>;
@@ -241,7 +241,8 @@ class CATCWP_Shortcode {
             }
         </style>
 
-        <span class="cacwp_text" title="Click to copy" data-content="<?php echo $content ?>" data-text="<?php echo $text; ?>"><?php echo $text; ?></span>
+        <span class="cacwp_text" title="Click to copy" data-content="<?php echo esc_html($content); ?>" data-text="<?php echo esc_html($text); ?>"><?php echo esc_html($text); ?></span>
+        
         <?php
         return ob_get_clean();
         

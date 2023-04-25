@@ -14,11 +14,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Copy to Clipboard for WP
- * Plugin URI:        https://https://github.com/noruzzamanrubel
+ * Plugin URI:        https://github.com/noruzzamanrubel/Copy-to-Clipboard-for-WP
  * Description:       This is a description of the plugin.
  * Version:           1.0.0
  * Author:            Noruzzaman
- * Author URI:        https://https://github.com/noruzzamanrubel
+ * Author URI:        https://profiles.wordpress.org/noruzzaman/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       catcwp
@@ -86,5 +86,4 @@ function run_catcwp() {
 }
 run_catcwp();
 
-// require_once plugin_dir_path( __FILE__ ) . 'functions.php';
 // require_once plugin_dir_path( __FILE__ ) . 'widgets/catcwp-widget.php';
