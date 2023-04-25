@@ -67,33 +67,64 @@ class CACTWP_setting {
             'title'  => __( ' List of Items', 'catcwp' ),
             'fields' => array(
                 array(
-                    'id'        => 'Copy_clipboard_lists',
+                    'id'        => 'copy_clipboard_lists',
                     'type'      => 'repeater',
                     // 'title'     => 'Add New',
                     'button_title'     => 'Add New',
                     'fields'    => array(
                     array(
-                        'id'    => 'Copy_clipboard_selector',
+                        'id'    => 'copy_clipboard_selector',
                         'type'  => 'text',
                         'title' => 'Selector',
                         ),
                       
                       array(
-                        'id'    => 'Copy_clipboard_text',
+                        'id'    => 'copy_clipboard_text',
                         'type'  => 'text',
                         'title' => 'Text',
                       ),
                   
                       array(
-                        'id'    => 'Copy_clipboard_content',
+                        'id'    => 'copy_clipboard_content',
                         'type'  => 'textarea',
                         'title' => 'Content',
                       ),
                       array(
-                        'id'    => 'Copy_clipboard_color',
+                        'id'      => 'copy_clipboard_typography',
+                        'type'    => 'typography',
+                        'title'   => 'Typography',
+                        'output'  => 'span.cacwp_text',
+                        'output_important' => true,
+                        'font_family'      => true,
+                        'font_weight'      => true,
+                        'subset'           => true,
+                        'font_style'       => false,
+                        'font_size'        => true,
+                        'line_height'      => true,
+                        'letter_spacing'   => true,
+                        'text_align'       => true,
+                        'text_transform'   => true,
+                        'color'            => false,
+                        'default' => array(
+                          'font-family'    => 'inherit',
+                          'font_size'    => 'inherit',
+                          'letter_spacing'    => 'inherit',
+                          'type'           => 'google',
+                          'unit'           => 'px',
+                        ),
+                      ),
+                      array(
+                        'id'          => 'copy_clipboard_bg_color',
+                        'type'        => 'color',
+                        'title'       => 'Background Color',
+                        'output_mode' => 'background-color',
+                        'default' => 'transparent'
+                      ),
+                      array(
+                        'id'    => 'copy_clipboard_color',
                         'type'    => 'color',
                         'title'   => 'Color',
-                        'default' => 'black'
+                        'default' => '#000000'
                       ),
                     )
                   ),                  

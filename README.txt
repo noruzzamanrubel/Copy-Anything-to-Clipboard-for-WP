@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Copy to Clipboard for WP ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://https://github.com/noruzzamanrubel
 Tags: comments, spam

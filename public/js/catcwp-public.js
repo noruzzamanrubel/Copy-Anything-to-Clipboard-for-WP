@@ -43,7 +43,7 @@
                 $(this).text('Copied');
                 $(this).css({
                     'color': 'green',
-                    'cursor': 'default'
+                    'cursor': 'pointer'
                 });
 
                 // Restore the original text and style after 2 seconds
