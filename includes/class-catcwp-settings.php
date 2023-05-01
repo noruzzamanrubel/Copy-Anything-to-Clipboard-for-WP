@@ -206,9 +206,8 @@ class CACTWP_setting {
             'title'  => __( 'Documentation', 'catcwp' ),
             'fields' => array(
                 array(
-                    'id'    => 'Copy_clipboard_documentation',
-                    'type'  => 'text',
-                    'title' => 'Copy clipboard documentation',
+                  'type'    => 'subheading',
+                  'content' => $this->documentation(),
                 ),
             ),
         ) );
@@ -221,6 +220,16 @@ class CACTWP_setting {
      */
     public static function get_settings() {
         return get_option( CACTWP_setting::$plugin_name );
+    }
+
+    protected function documentation(){
+      ob_start();
+      ?>
+        <div class="catcwp_main_wrapper">
+          <h1>Documentation</h1>
+        </div>
+      <?php
+      return ob_get_clean();
     }
 
 }
