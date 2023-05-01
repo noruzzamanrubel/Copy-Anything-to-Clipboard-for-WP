@@ -49,19 +49,6 @@ class CACTWP_setting {
         ( $prefix, $options_panel_builder['config'] );
 
         $parent = '';
-
-        CSF::createSection( $prefix, array(
-            'parent' => $parent,
-            'title'  => __( 'General Setting', 'catcwp' ),
-            'fields' => array(
-                array(
-                    'id'    => 'Copy_clipboard_setting',
-                    'type'  => 'text',
-                    'title' => 'Copy Clipboard Text',
-                    'default' => '20%off'
-                ),
-            ),
-        ) );
         CSF::createSection( $prefix, array(
             'parent' => $parent,
             'title'  => __( ' List of Items', 'catcwp' ),
@@ -211,6 +198,18 @@ class CACTWP_setting {
                       ),
                     )
                   ),                  
+            ),
+        ) );
+
+        CSF::createSection( $prefix, array(
+            'parent' => $parent,
+            'title'  => __( 'Documentation', 'catcwp' ),
+            'fields' => array(
+                array(
+                    'id'    => 'Copy_clipboard_documentation',
+                    'type'  => 'text',
+                    'title' => 'Copy clipboard documentation',
+                ),
             ),
         ) );
     }
