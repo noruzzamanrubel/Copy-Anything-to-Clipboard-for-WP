@@ -13,7 +13,7 @@
  * @package           Catcwp
  *
  * @wordpress-plugin
- * Plugin Name:       Copy to Clipboard for WP current
+ * Plugin Name:       Copy to Clipboard for WP
  * Plugin URI:        https://github.com/noruzzamanrubel/Copy-to-Clipboard-for-WP
  * Description:       This is a description of the plugin.
  * Version:           1.0.0
