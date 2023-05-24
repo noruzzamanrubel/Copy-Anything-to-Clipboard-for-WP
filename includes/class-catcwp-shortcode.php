@@ -14,9 +14,26 @@ class CATCWP_Shortcode {
     public function shortcode_generator($atts, $content = null) {
 
         ob_start();
-        $settings = CACTWP_setting::get_settings();
-        $copy_clipboard_lists = $settings['copy_clipboard_lists'];
+
+
+        $args = array(
+            'post_type'      => 'copy_to_clipboard',
+            'posts_per_page' => -1,
+        );
         
+        $query = new WP_Query($args);
+        
+        $titles = array();
+        $meta = [];
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $titles[] = get_the_title();
+                $meta[] = get_post_meta( get_the_ID(), 'copy_to_clipboard_options', true );
+            }
+            wp_reset_postdata();
+        }
+
         $copy_clipboard_selector = [];
         $copy_clipboard_text = [];
         $copy_clipboard_content = [];
@@ -56,13 +73,12 @@ class CATCWP_Shortcode {
         $copy_clipboard_border_radius_bottom = [];
         $copy_clipboard_border_radius_left = [];
 
-        if(!empty($copy_clipboard_lists)){
-            foreach($copy_clipboard_lists as $item){
+        if(!empty($meta)){
+            foreach ($meta as $item) {
 
                 $copy_clipboard_selector[] = strtolower($item['copy_clipboard_selector']);
                 $copy_clipboard_text[] = $item['copy_clipboard_text'];
                 $copy_clipboard_content[] = $item['copy_clipboard_content'];
-
                 $copy_clipboard_bg_color[] = $item['copy_clipboard_bg_color'];
                 $copy_clipboard_bg_hover_color[] = $item['copy_clipboard_bg_hover_color'];
                 $copy_clipboard_color[] = $item['copy_clipboard_color'];
@@ -97,12 +113,12 @@ class CATCWP_Shortcode {
                 $copy_clipboard_border_radius_right [] = $item['copy_clipboard_border_radius_right'];
                 $copy_clipboard_border_radius_bottom [] = $item['copy_clipboard_border_radius_bottom'];
                 $copy_clipboard_border_radius_left [] = $item['copy_clipboard_border_radius_left'];
+
             }
         }
 
-        $tag = isset($atts['tag']) ? strtolower($atts['tag']) : ''; // get the 'tag' attribute value
-
         // check if the 'tag' value matches a value in $copy_clipboard_selector array
+        $tag = isset($atts['tag']) ? strtolower($atts['tag']) : '';
         if (in_array($tag, $copy_clipboard_selector)) {
 
             $index = array_search($tag, $copy_clipboard_selector);
@@ -143,6 +159,7 @@ class CATCWP_Shortcode {
             $custom_border_radius_right = $copy_clipboard_border_radius_right[$index];
             $custom_border_radius_bottom = $copy_clipboard_border_radius_bottom[$index];
             $custom_border_radius_left = $copy_clipboard_border_radius_left[$index];
+
         } else {
             //set default value
             $custom_text = 'Click to copy';
@@ -195,9 +212,10 @@ class CATCWP_Shortcode {
         }
         
         ?>
-        
+
         <style>
             span.cacwp_text{
+
                 background-color: <?php echo $custom_bg_color; ?>;
                 color: <?php echo $custom_color; ?>;
 
@@ -234,6 +252,7 @@ class CATCWP_Shortcode {
                 border-top-right-radius:    <?php echo $custom_border_radius_right; ?>px;
                 border-bottom-right-radius: <?php echo $custom_border_radius_bottom; ?>px;
                 border-bottom-left-radius:  <?php echo $custom_border_radius_left; ?>px;
+                
             }
             span.cacwp_text:hover {
                 background-color: <?php echo $custom_bg_hover_color; ?>;

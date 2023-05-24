@@ -26,14 +26,28 @@ class CATCWP_COPY_WIDGET extends \Elementor\Widget_Base {
 
 	protected function register_controls() {
 
-		$settings = CACTWP_setting::get_settings();
-		$copy_clipboard_lists = $settings['copy_clipboard_lists'];
-		$copy_clipboard_selector = [];
-		if(!empty($copy_clipboard_lists)){
-			foreach($copy_clipboard_lists as $item){
-				$copy_clipboard_selector[] = strtolower($item['copy_clipboard_selector']);
-			}
-		}
+
+
+		$args = array(
+            'post_type'      => 'copy_to_clipboard', 
+            'posts_per_page' => -1,
+        );
+        
+        $query = new WP_Query($args);
+        
+        $meta = [];
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $meta[] = get_post_meta( get_the_ID(), 'copy_to_clipboard_options', true );
+            }
+            wp_reset_postdata();
+        }
+
+        $copy_clipboard_selector = [];
+        foreach ($meta as $meta_item) {
+            $copy_clipboard_selector[] = strtolower($meta_item['copy_clipboard_select']);
+        }
 	
 		$this->start_controls_section(
 			'section_title',
@@ -56,14 +70,27 @@ class CATCWP_COPY_WIDGET extends \Elementor\Widget_Base {
 	}
 	
 	protected function render() {
-		$settings = CACTWP_setting::get_settings();
-		$copy_clipboard_lists = $settings['copy_clipboard_lists'];
-		$copy_clipboard_selector = [];
-		if(!empty($copy_clipboard_lists)){
-			foreach($copy_clipboard_lists as $item){
-				$copy_clipboard_selector[] = strtolower($item['copy_clipboard_selector']);
-			}
-		}
+		$args = array(
+            'post_type'      => 'copy_to_clipboard',
+            'posts_per_page' => -1,
+        );
+        
+        $query = new WP_Query($args);
+        
+        $meta = [];
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $meta[] = get_post_meta( get_the_ID(), 'copy_to_clipboard_options', true );
+            }
+            wp_reset_postdata();
+        }
+
+        $copy_clipboard_selector = [];
+        foreach ($meta as $meta_item) {
+            $copy_clipboard_selector[] = strtolower($meta_item['copy_clipboard_selector']);
+        }
+		
 		$settings = $this->get_settings_for_display();
 		$tag_index = isset($settings['tag_selector']) ? $settings['tag_selector'] : -1;
 		$tag = $tag_index !== -1 ? $copy_clipboard_selector[$tag_index] : '';

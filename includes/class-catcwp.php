@@ -138,7 +138,10 @@ class Catcwp {
 		/**
          * The class responsible for loading all the table of content settings of the plugin.
          */
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-catcwp-settings.php';
+        // require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-catcwp-settings.php';
+		
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-catcwp-custom-post.php';
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-catcwp-custom-meta.php';
 
 		$this->loader = new Catcwp_Loader();
 
