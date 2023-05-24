@@ -1,7 +1,5 @@
 <?php
 
-require_once CATCWP_PATH . 'includes/class-catcwp-settings.php';
-
 class CATCWP_Shortcode {
 
     public function shortcode_register() {
@@ -214,7 +212,7 @@ class CATCWP_Shortcode {
         ?>
 
         <style>
-            span.cacwp_text{
+            span.cacwp_text.index_<?php echo $index; ?> {
 
                 background-color: <?php echo $custom_bg_color; ?>;
                 color: <?php echo $custom_color; ?>;
@@ -252,15 +250,15 @@ class CATCWP_Shortcode {
                 border-top-right-radius:    <?php echo $custom_border_radius_right; ?>px;
                 border-bottom-right-radius: <?php echo $custom_border_radius_bottom; ?>px;
                 border-bottom-left-radius:  <?php echo $custom_border_radius_left; ?>px;
-                
+
             }
-            span.cacwp_text:hover {
+            span.cacwp_text.index_<?php echo $index; ?>:hover {
                 background-color: <?php echo $custom_bg_hover_color; ?>;
                 color: <?php echo $custom_hover_color; ?>;
             }
         </style>
 
-        <span class="cacwp_text" title="Click to copy" data-content="<?php echo esc_html($content); ?>" data-text="<?php echo esc_html($text); ?>"><?php echo esc_html($text); ?></span>
+        <span class="cacwp_text index_<?php echo $index; ?>" title="Click to copy" data-content="<?php echo esc_html($content); ?>" data-text="<?php echo esc_html($text); ?>"><?php echo esc_html($text); ?></span>
         
         <?php
         return ob_get_clean();
@@ -268,5 +266,3 @@ class CATCWP_Shortcode {
     }
     
 }
-
-
