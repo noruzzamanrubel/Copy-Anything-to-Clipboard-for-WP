@@ -79,7 +79,6 @@ class Catcwp {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 		$this->register_shortcode();
-		$this->register_settings();
 
 	}
 
@@ -124,9 +123,8 @@ class Catcwp {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-catcwp-public.php';
 
-				/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
+		/**
+		 * The class responsible for shortcode functionality of the plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-catcwp-shortcode.php';
 
@@ -136,10 +134,13 @@ class Catcwp {
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'libs/codestar-framework/codestar-framework.php';
 
 		/**
-         * The class responsible for loading all the table of content settings of the plugin.
+         * The class responsible for loading custom post of the plugin.
          */
-		
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-catcwp-custom-post.php';
+
+		/**
+         * The class responsible for loading custom meta box of the plugin.
+         */
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-catcwp-custom-meta.php';
 
 		$this->loader = new Catcwp_Loader();
@@ -244,17 +245,6 @@ class Catcwp {
         
         $plugin_shortcode = new CATCWP_Shortcode();
         $plugin_shortcode->shortcode_register();
-    }
-
-	/**
-     * Register plugin settings.
-     *
-     * @access   private
-     */
-    private function register_settings() {
-
-        $plugin_settings = new CACTWP_setting();
-        $plugin_settings->generate_settings();
     }
 
 }
