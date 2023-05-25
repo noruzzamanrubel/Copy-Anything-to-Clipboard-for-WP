@@ -1,15 +1,15 @@
 <?php
 
-class CATCWP_Shortcode {
+class Catcwp_Shortcode {
 
-    public function shortcode_register() {
-        add_shortcode('copy_clipboard', [$this, 'shortcode_generator']);
+    public function Catcwp_shortcode_register() {
+        add_shortcode('copy_clipboard', [$this, 'Catcwp_shortcode_generator']);
     }
     
     /**
      * Shortcode Render Function
      */
-    public function shortcode_generator($atts, $content = null) {
+    public function Catcwp_shortcode_generator($atts, $content = null) {
 
         ob_start();
 

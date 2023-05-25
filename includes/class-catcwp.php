@@ -243,8 +243,8 @@ class Catcwp {
      */
     private function register_shortcode() {
         
-        $plugin_shortcode = new CATCWP_Shortcode();
-        $plugin_shortcode->shortcode_register();
+        $plugin_shortcode = new Catcwp_Shortcode();
+        $plugin_shortcode->Catcwp_shortcode_register();
     }
 
 }
