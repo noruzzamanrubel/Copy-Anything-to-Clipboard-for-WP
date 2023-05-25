@@ -41,7 +41,7 @@ class Catcwp_Custom_Post {
             'labels'                => $labels,
             'supports'              => array('title'),
             'hierarchical'          => false,
-            'public'                => true,
+            'public'                => false,
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 5,
