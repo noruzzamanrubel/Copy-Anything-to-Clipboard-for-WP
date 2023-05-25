@@ -1,10 +1,10 @@
 <?php
 class Catcwp_Custom_Post {
     public function __construct() {
-        add_action('init', array($this, 'generate_custom_post'));
+        add_action('init', array($this, 'Catcwp_generate_custom_post'));
     }
 
-    public function generate_custom_post() {
+    public function Catcwp_generate_custom_post() {
         $labels = array(
             'name'                  => 'Copy to Clipboard',
             'singular_name'         => 'Copy to Clipboard',
