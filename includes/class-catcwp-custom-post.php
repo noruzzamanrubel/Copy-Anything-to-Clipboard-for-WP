@@ -1,43 +1,44 @@
 <?php
 class Catcwp_Custom_Post {
     public function __construct() {
-        add_action('init', array($this, 'Catcwp_generate_custom_post'));
+        add_action('init', array($this, 'catcwp_generate_custom_post'));
     }
 
-    public function Catcwp_generate_custom_post() {
+    public function catcwp_generate_custom_post() {
+
         $labels = array(
-            'name'                  => 'Copy to Clipboard',
-            'singular_name'         => 'Copy to Clipboard',
-            'menu_name'             => 'Copy to Clipboard',
-            'name_admin_bar'        => 'Copy to Clipboard',
-            'archives'              => 'Copy to Clipboard Archives',
-            'attributes'            => 'Copy to Clipboard Attributes',
-            'parent_item_colon'     => 'Parent Item:',
-            'all_items'             => 'All Items',
-            'add_new_item'          => 'Add New Item',
-            'add_new'               => 'Add New',
-            'new_item'              => 'New Item',
-            'edit_item'             => 'Edit Item',
-            'update_item'           => 'Update Item',
-            'view_item'             => 'View Item',
-            'view_items'            => 'View Items',
-            'search_items'          => 'Search Item',
-            'not_found'             => 'Not found',
-            'not_found_in_trash'    => 'Not found in Trash',
-            'featured_image'        => 'Featured Image',
-            'set_featured_image'    => 'Set featured image',
-            'remove_featured_image' => 'Remove featured image',
-            'use_featured_image'    => 'Use as featured image',
-            'insert_into_item'      => 'Insert into item',
-            'uploaded_to_this_item' => 'Uploaded to this item',
-            'items_list'            => 'Items list',
-            'items_list_navigation' => 'Items list navigation',
-            'filter_items_list'     => 'Filter items list',
+            'name'                  => __('Copy to Clipboard', 'catcwp'),
+            'singular_name'         => __('Copy to Clipboard', 'catcwp'),
+            'menu_name'             => __('Copy to Clipboard', 'catcwp'),
+            'name_admin_bar'        => __('Copy to Clipboard', 'catcwp'),
+            'archives'              => __('Copy to Clipboard Archives', 'catcwp'),
+            'attributes'            => __('Copy to Clipboard Attributes', 'catcwp'),
+            'parent_item_colon'     => __('Parent Item:', 'catcwp'),
+            'all_items'             => __('All Items', 'catcwp'),
+            'add_new_item'          => __('Add New Item', 'catcwp'),
+            'add_new'               => __('Add New', 'catcwp'),
+            'new_item'              => __('New Item', 'catcwp'),
+            'edit_item'             => __('Edit Item', 'catcwp'),
+            'update_item'           => __('Update Item', 'catcwp'),
+            'view_item'             => __('View Item', 'catcwp'),
+            'view_items'            => __('View Items', 'catcwp'),
+            'search_items'          => __('Search Item', 'catcwp'),
+            'not_found'             => __('Not found', 'catcwp'),
+            'not_found_in_trash'    => __('Not found in Trash', 'catcwp'),
+            'featured_image'        => __('Featured Image', 'catcwp'),
+            'set_featured_image'    => __('Set featured image', 'catcwp'),
+            'remove_featured_image' => __('Remove featured image', 'catcwp'),
+            'use_featured_image'    => __('Use as featured image', 'catcwp'),
+            'insert_into_item'      => __('Insert into item', 'catcwp'),
+            'uploaded_to_this_item' => __('Uploaded to this item', 'catcwp'),
+            'items_list'            => __('Items list', 'catcwp'),
+            'items_list_navigation' => __('Items list navigation', 'catcwp'),
+            'filter_items_list'     => __('Filter items list', 'catcwp'),
         );
 
         $args = array(
-            'label'                 => 'Copy to Clipboard',
-            'description'           => 'Custom post type for Copy to Clipboard functionality',
+            'label'                 => __('Copy to Clipboard', 'catcwp'),
+            'description'           => __('Custom post type for Copy to Clipboard functionality', 'catcwp'),
             'labels'                => $labels,
             'supports'              => array('title'),
             'hierarchical'          => false,
@@ -59,4 +60,3 @@ class Catcwp_Custom_Post {
 }
 
 $catcwp_custom_post = new Catcwp_Custom_Post();
-
