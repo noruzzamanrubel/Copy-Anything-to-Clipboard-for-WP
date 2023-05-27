@@ -1,6 +1,6 @@
 <?php
 // Add a new column to the admin post list
-function Catcwp_add_custom_shortcode_column($columns) {
+function catcwp_add_custom_shortcode_column($columns) {
     $new_columns = array();
     foreach ($columns as $key => $value) {
         $new_columns[$key] = $value;
@@ -10,21 +10,26 @@ function Catcwp_add_custom_shortcode_column($columns) {
     }
     return $new_columns;
 }
-add_filter('manage_copy_to_clipboard_posts_columns', 'Catcwp_add_custom_shortcode_column');
+add_filter('manage_copy_to_clipboard_posts_columns', 'catcwp_add_custom_shortcode_column');
 
 // Populate the custom column with data
-function Catcwp_display_custom_shortcode_column($column, $post_id) {
+function catcwp_display_custom_shortcode_column($column, $post_id) {
     if ($column === 'shortcode') {
         // Output the shortcode with dynamic post ID
-        $meta = get_post_meta( get_the_ID(), 'copy_to_clipboard_options', true );
+        $meta = get_post_meta(get_the_ID(), 'copy_to_clipboard_options', true);
         $copy_clipboard_selector = strtolower($meta['copy_clipboard_selector']);
-        echo '[copy_clipboard tag=' . $copy_clipboard_selector . ']';
+        $shortcode = '[copy_clipboard tag=' . $copy_clipboard_selector . ']';
+
+        // Output the shortcode with a click-to-copy functionality
+        echo '<div class="shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';
+        echo '<div class="catcwp-after-copy-text" style="opacity: 0; top: 0px;"><i class="fa fa-check-circle"></i>  Shortcode Copied to Clipboard! </div>';
     }
 }
-add_action('manage_copy_to_clipboard_posts_custom_column', 'Catcwp_display_custom_shortcode_column', 10, 2);
+
+add_action('manage_copy_to_clipboard_posts_custom_column', 'catcwp_display_custom_shortcode_column', 10, 2);
 
 // Adjust column order
-function Catcwp_move_shortcode_column($columns) {
+function catcwp_move_shortcode_column($columns) {
     $shortcode = $columns['shortcode'];
     unset($columns['shortcode']);
     $new_columns = array();
@@ -36,11 +41,11 @@ function Catcwp_move_shortcode_column($columns) {
     }
     return $new_columns;
 }
-add_filter('manage_copy_to_clipboard_posts_columns', 'Catcwp_move_shortcode_column');
+add_filter('manage_copy_to_clipboard_posts_columns', 'catcwp_move_shortcode_column');
 
 // Make the column sortable
-function Catcwp_make_shortcode_column_sortable($columns) {
+function catcwp_make_shortcode_column_sortable($columns) {
     $columns['shortcode'] = 'shortcode';
     return $columns;
 }
-add_filter('manage_edit-copy_to_clipboard_sortable_columns', 'Catcwp_make_shortcode_column_sortable');
+add_filter('manage_edit-copy_to_clipboard_sortable_columns', 'catcwp_make_shortcode_column_sortable');
