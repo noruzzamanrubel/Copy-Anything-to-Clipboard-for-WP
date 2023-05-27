@@ -2,10 +2,11 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
- .toplevel_page_catcwp-settings .csf-repeater-item {
-    margin-bottom: 30px !important;
-    border: 0px solid #111 !important; 
- }
- .toplevel_page_catcwp-settings .csf-sections {
-    background-color: #111 !important;
- }
+.catcwp-shortcode-wrap .selectable {
+   display: inline-block;
+   padding: 6px;
+   cursor: pointer;
+   border: 1px solid #8c8f94;
+   border-radius: 4px;
+   line-height: 2;
+}

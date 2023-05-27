@@ -21,8 +21,7 @@ function catcwp_display_custom_shortcode_column($column, $post_id) {
         $shortcode = '[copy_clipboard tag=' . $copy_clipboard_selector . ']';
 
         // Output the shortcode with a click-to-copy functionality
-        echo '<div class="shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';
-        echo '<div class="catcwp-after-copy-text" style="opacity: 0; top: 0px;"><i class="fa fa-check-circle"></i>  Shortcode Copied to Clipboard! </div>';
+        echo '<div class="catcwp-shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';
     }
 }
 
