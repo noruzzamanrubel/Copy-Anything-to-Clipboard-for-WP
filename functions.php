@@ -13,7 +13,7 @@ function catcwp_add_custom_shortcode_column($columns) {
 add_filter('manage_copy_to_clipboard_posts_columns', 'catcwp_add_custom_shortcode_column');
 
 // Populate the custom column with data
-function catcwp_display_custom_shortcode_column($column, $post_id) {
+function catcwp_display_custom_shortcode_column($column) {
     if ($column === 'shortcode') {
         // Output the shortcode with dynamic post ID
         $meta = get_post_meta(get_the_ID(), 'copy_to_clipboard_options', true);
@@ -48,3 +48,32 @@ function catcwp_make_shortcode_column_sortable($columns) {
     return $columns;
 }
 add_filter('manage_edit-copy_to_clipboard_sortable_columns', 'catcwp_make_shortcode_column_sortable');
+
+// Add a metabox to the sidebar for the "copy_to_clipboard" post type
+function catcwp_copy_to_clipboard_shortcode_metabox() {
+    add_meta_box(
+        'copy_to_clipboard_metabox',
+        'Copy to Clipboard Shortcode',
+        'catcwp_render_copy_to_clipboard_shortcode_metabox',
+        'copy_to_clipboard',
+        'side',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'catcwp_copy_to_clipboard_shortcode_metabox');
+
+// Render the content of the metabox
+function catcwp_render_copy_to_clipboard_shortcode_metabox($post) {
+    // Output the shortcode with dynamic post ID
+    $meta = get_post_meta($post->ID, 'copy_to_clipboard_options', true);
+
+    if (isset($meta['copy_clipboard_selector'])) {
+        $copy_clipboard_selector = strtolower($meta['copy_clipboard_selector']);
+        $shortcode = '[copy_clipboard tag=' . $copy_clipboard_selector . ']';
+
+        // Output the shortcode with a click-to-copy functionality
+        echo '<div class="catcwp-shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';
+    }
+}
+
+

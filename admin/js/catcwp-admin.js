@@ -28,7 +28,7 @@
             $tempElement.remove();
 
             // Apply the provided CSS styles to the existing element
-            let $copiedMessage = $('<div class="catcwp-after-copy-text"><i class="fa fa-check-circle"></i> Shortcode Copied to Clipboard!</div>');
+            let $copiedMessage = $('<div class="catcwp-after-copy-text">Shortcode Copied to Clipboard!</div>');
             $copiedMessage.css({
                 'top': '36px',
                 'z-index': '9999',
