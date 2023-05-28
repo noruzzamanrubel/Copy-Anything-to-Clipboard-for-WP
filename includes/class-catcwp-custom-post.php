@@ -2,6 +2,7 @@
 class Catcwp_Custom_Post {
     public function __construct() {
         add_action('init', array($this, 'catcwp_generate_custom_post'));
+        add_action('admin_menu', array($this, 'catcwp_add_submenu'));
     }
 
     public function catcwp_generate_custom_post() {
@@ -78,6 +79,52 @@ class Catcwp_Custom_Post {
         
         register_post_type('copy_to_clipboard', $args);
     }
+
+    public function catcwp_add_submenu() {
+        add_submenu_page(
+            'edit.php?post_type=copy_to_clipboard', // Parent menu slug
+            'Help', // Page title
+            'Help', // Menu title
+            'manage_options', // Capability required to access the submenu
+            'help', // Submenu slug
+            array($this, 'catcwp_help_page') // Callback function for the submenu page content
+        );
+    }
+    
+    public function catcwp_help_page() {
+        ?>
+        <div class="wrap">
+            <h1>Copy to Clipboard Functionality</h1>
+            <p>
+                The "Copy to Clipboard" functionality allows users to save and manage text snippets that can be easily copied to the clipboard for convenient usage.
+            </p>
+            <h2>Usage</h2>
+            <p>
+                To create a new "Copy to Clipboard" item, navigate to the "Copy to Clipboard" menu in the WordPress admin dashboard and click on "Add New Item". Fill in the title of the item and the desired content to be copied.
+            </p>
+            <p>
+                Once you have created your items, you can view, edit, or delete them from the "Copy to Clipboard" submenu.
+            </p>
+            <h2>Copying to Clipboard</h2>
+            <p>
+                To copy the content of an item to the clipboard, click on the item's title to edit it, and then click on the "Copy to Clipboard" button. The content will be copied to your clipboard, ready to be pasted elsewhere.
+            </p>
+            <h2>Managing Items</h2>
+            <p>
+                From the "Copy to Clipboard" submenu, you can manage your items by performing the following actions:
+            </p>
+            <ul>
+                <li><strong>Edit:</strong> Click on an item's title to edit its content.</li>
+                <li><strong>Delete:</strong> Hover over an item and click on the "Trash" link to delete it permanently.</li>
+            </ul>
+            <h2>Additional Settings</h2>
+            <p>
+                For additional settings and customization options, please refer to the plugin's documentation or settings pages.
+            </p>
+        </div>
+        <?php
+    }    
+    
 }
 
-$catcwp_custom_post = new Catcwp_Custom_Post();
+new Catcwp_Custom_Post();
