@@ -93,34 +93,16 @@ class Catcwp_Custom_Post {
     
     public function catcwp_help_page() {
         ?>
-        <div class="wrap">
-            <h1>Copy to Clipboard Functionality</h1>
-            <p>
-                The "Copy to Clipboard" functionality allows users to save and manage text snippets that can be easily copied to the clipboard for convenient usage.
-            </p>
-            <h2>Usage</h2>
-            <p>
-                To create a new "Copy to Clipboard" item, navigate to the "Copy to Clipboard" menu in the WordPress admin dashboard and click on "Add New Item". Fill in the title of the item and the desired content to be copied.
-            </p>
-            <p>
-                Once you have created your items, you can view, edit, or delete them from the "Copy to Clipboard" submenu.
-            </p>
-            <h2>Copying to Clipboard</h2>
-            <p>
-                To copy the content of an item to the clipboard, click on the item's title to edit it, and then click on the "Copy to Clipboard" button. The content will be copied to your clipboard, ready to be pasted elsewhere.
-            </p>
-            <h2>Managing Items</h2>
-            <p>
-                From the "Copy to Clipboard" submenu, you can manage your items by performing the following actions:
-            </p>
-            <ul>
-                <li><strong>Edit:</strong> Click on an item's title to edit its content.</li>
-                <li><strong>Delete:</strong> Hover over an item and click on the "Trash" link to delete it permanently.</li>
-            </ul>
-            <h2>Additional Settings</h2>
-            <p>
-                For additional settings and customization options, please refer to the plugin's documentation or settings pages.
-            </p>
+        <div class="catcwp_example_wrapper">
+                <h1>Method 1 - Using Shortcode Parameters</h1>
+                <h3>If you want to display the same text.</h3>
+                <p>Get 20% off your next purchase with our exclusive coupon! Simply use the code 'SAVE20' at checkout to avail the discount. Don't miss out on this limited-time offer!</p>
+                <h3>How to use the shortcode parameter</h3>
+                <p>Get 20% off your next purchase with our exclusive coupon! Simply use the code <b>[copy_clipboard text="('SAVE20')"]</b> at checkout to avail the discount. Don't miss out on this limited-time offer!</p>
+                <h3>If you want to copy different text/link while displaying another text</h3>
+                <p>Get 20% off your next purchase with our exclusive coupon! Simply use the code 'SAVE20' at checkout to avail the discount. Don't miss out on this limited-time offer!</p>
+                <h3>How to use the shortcode parameter</h3>
+                <p>Get 20% off your next purchase with our exclusive coupon! Simply use the code <b>[copy_clipboard content="('SAVE20')" text="get coupon code"]</b> at checkout to avail the discount. Don't miss out on this limited-time offer!</p>
         </div>
         <?php
     }    

@@ -39,27 +39,55 @@
                 $tempElement.remove();
 
                 // Update the text and style
-                let originalText = $element.attr('data-text');
-                $(this).text('Copied');
-                $(this).css({
-                    'color': 'green',
-                    'cursor': 'pointer'
+                // let originalText = $element.attr('data-text');
+                // $(this).text('Copied');
+                // $(this).css({
+                //     'color': 'green',
+                //     'cursor': 'pointer'
+                // });
+
+
+                // Apply the provided CSS styles to the existing element
+                let $copiedMessage = $('<div class="catcwp-after-copy-text">Copied to Clipboard!</div>');
+                $copiedMessage.css({
+                    'top': '36px',
+                    'z-index': '9999',
+                    'position': 'fixed',
+                    'width': '250px',
+                    'left': '50%',
+                    'transform': 'translateX(-50%)',
+                    'font-size': '14px',
+                    'font-weight': '400',
+                    'text-transform': 'capitalize',
+                    'text-align': 'center',
+                    'padding': '13px 15px',
+                    'line-height': '15px',
+                    'color': '#5db62e',
+                    'border-radius': '4px',
+                    'background': '#eaf8e1',
+                    'border': '1px solid #a2de83'
                 });
 
-                // Restore the original text and style after 2 seconds
-                setTimeout(function() {
-                    $(this).text(originalText);
-                    $(this).css({
-                        'color': '',
-                        'cursor': 'pointer'
-                    });
-                }.bind(this), 2000);
+                $(this).append($copiedMessage);
+                // Hide the "Copied" message after 2 seconds
+                setTimeout(function () {
+                    $copiedMessage.remove();
+                }, 2000);
+
+                // // Restore the original text and style after 2 seconds
+                // setTimeout(function() {
+                //     $(this).text(originalText);
+                //     $(this).css({
+                //         'color': '',
+                //         'cursor': 'pointer'
+                //     });
+                // }.bind(this), 2000);
 
                 // Restore the original text selection
-                if (selected) {
-                    document.getSelection().removeAllRanges();
-                    document.getSelection().addRange(selected);
-                }
+                // if (selected) {
+                //     document.getSelection().removeAllRanges();
+                //     document.getSelection().addRange(selected);
+                // }
             });
         });
 		  
