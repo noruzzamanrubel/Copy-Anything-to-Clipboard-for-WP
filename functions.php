@@ -18,7 +18,7 @@ function catcwp_display_custom_shortcode_column($column) {
         // Output the shortcode with dynamic post ID
         $meta = get_post_meta(get_the_ID(), 'copy_to_clipboard_options', true);
         $copy_clipboard_selector = strtolower($meta['copy_clipboard_selector']);
-        $shortcode = '[copy_clipboard tag=' . $copy_clipboard_selector . ']';
+        $shortcode = '[copy_clipboard tag="' . $copy_clipboard_selector . '"]';
 
         // Output the shortcode with a click-to-copy functionality
         echo '<div class="catcwp-shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';
@@ -69,7 +69,7 @@ function catcwp_render_copy_to_clipboard_shortcode_metabox($post) {
 
     if (isset($meta['copy_clipboard_selector'])) {
         $copy_clipboard_selector = strtolower($meta['copy_clipboard_selector']);
-        $shortcode = '[copy_clipboard tag=' . $copy_clipboard_selector . ']';
+        $shortcode = '[copy_clipboard tag="' . $copy_clipboard_selector . '"]';
 
         // Output the shortcode with a click-to-copy functionality
         echo '<div class="catcwp-shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';

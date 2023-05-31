@@ -104,6 +104,9 @@ class Catcwp_Custom_Post {
                 <h3>How to use the shortcode parameter</h3>
                 <p>Get 20% off your next purchase with our exclusive coupon! Simply use the code <b>[copy_clipboard content="('SAVE20')" text="get coupon code"]</b> at checkout to avail the discount. Don't miss out on this limited-time offer!</p>
         </div>
+        <div class="catcwp_example_wrapper">
+                <h1>Method 2 - Using builting Shortcode from post</h1>
+        </div>
         <?php
     }    
     
