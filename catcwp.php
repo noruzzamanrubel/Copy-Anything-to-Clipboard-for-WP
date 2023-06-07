@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Copy to Clipboard for WP
  * Plugin URI:        https://github.com/noruzzamanrubel/Copy-to-Clipboard-for-WP
- * Description:       This is a description of the plugin.
+ * Description:       Copy to Clipboard is a feature that allows users to copy content from a website and save it to their computer's clipboard.
  * Version:           1.0.0
  * Author:            Noruzzaman
  * Author URI:        https://https://github.com/noruzzamanrubel
