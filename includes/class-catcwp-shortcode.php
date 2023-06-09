@@ -163,41 +163,6 @@ class Catcwp_Shortcode {
             $custom_text = 'Click to copy';
             $custom_content = '';
 
-            $custom_bg_color = '#ffffff';
-            $custom_bg_hover_color = '#ffffff';
-            $custom_color = '#000000';
-            $custom_hover_color = '#000000';
-
-            $custom_font_family = 'inherit';
-            $custom_font_weight = 'inherit';
-            $custom_text_align = 'inherit';
-            $custom_text_transform = 'inherit';
-            $custom_font_size = 'inherit';
-            $custom_line_height = 'inherit';
-            $custom_letter_spacing = 'inherit';
-
-            $custom_padding_top = '0';
-            $custom_padding_right = '0';
-            $custom_padding_bottom = '0';
-            $custom_padding_left = '0';
-
-            $custom_margin_top = '0';
-            $custom_margin_right = '0';
-            $custom_margin_bottom = '0';
-            $custom_margin_left = '0';
-
-            $custom_border_top = '0';
-            $custom_border_right = '0';
-            $custom_border_bottom = '0';
-            $custom_border_left = '0';
-            $custom_border_color = '#fff';
-            $custom_border_style = 'solid';
-
-            $custom_border_radius_top = '0';
-            $custom_border_radius_right = '0';
-            $custom_border_radius_bottom = '0';
-            $custom_border_radius_left = '0';
-
         }
 
         // Content Display Condition
@@ -214,47 +179,47 @@ class Catcwp_Shortcode {
         <style>
             span.cacwp_text.index_<?php echo $index; ?> {
 
-                background-color: <?php echo $custom_bg_color; ?>;
-                color: <?php echo $custom_color; ?>;
-
-                font-family: <?php echo $custom_font_family; ?>;
-                font-weight: <?php echo $custom_font_weight; ?>;
-                text-align: <?php echo $custom_text_align; ?>;
-                text-transform: <?php echo $custom_text_transform; ?>;
-                font-size: <?php echo $custom_font_size; ?>px;
-                line-height: <?php echo $custom_line_height; ?>px;
-                letter-spacing: <?php echo $custom_letter_spacing; ?>px;
-
                 cursor: pointer;
                 display: inline-block;
                 transition: ease-in-out .5s;
 
-                padding-top: <?php echo $custom_padding_top; ?>px;
-                padding-right: <?php echo $custom_padding_right; ?>px;
-                padding-bottom: <?php echo $custom_padding_bottom; ?>px;
-                padding-left: <?php echo $custom_padding_left; ?>px;
+                background-color: <?php echo $custom_bg_color ? $custom_bg_color : '#ffffff'; ?>;
+                color: <?php echo $custom_color ? $custom_color : '#000000'; ?>;
 
-                margin-top: <?php echo $custom_margin_top; ?>px;
-                margin-right: <?php echo $custom_margin_right; ?>px;
-                margin-bottom: <?php echo $custom_margin_bottom; ?>px;
-                margin-left: <?php echo $custom_margin_left; ?>px;
+                font-family: <?php echo ($custom_font_family ? $custom_font_family : '"Roboto", Sans-serif'); ?>;
+                font-weight: <?php echo ($custom_font_weight ? $custom_font_weight : '500'); ?>;
+                text-align: <?php echo ($custom_text_align ? $custom_text_align : 'center'); ?>;
+                text-transform: <?php echo ($custom_text_transform ? $custom_text_transform : 'none'); ?>;
+                font-size: <?php echo ($custom_font_size ? $custom_font_size . 'px' : '15px'); ?>;
+                line-height: <?php echo ($custom_line_height ? $custom_line_height . 'px' : '1'); ?>;
+                letter-spacing: <?php echo ($custom_letter_spacing ? $custom_letter_spacing . 'px' : 'normal'); ?>;
 
-                border-top: <?php echo $custom_border_top; ?>px;
-                border-right: <?php echo $custom_border_right; ?>px;
-                border-bottom: <?php echo $custom_border_bottom; ?>px;
-                border-left: <?php echo $custom_border_left; ?>px;
-                border-color: <?php echo $custom_border_color; ?>;
-                border-style: <?php echo $custom_border_style; ?>;
+                padding-top: <?php echo $custom_padding_top ? $custom_padding_top . 'px' : '0'; ?>;
+                padding-right: <?php echo $custom_padding_right ? $custom_padding_right . 'px' : '0'; ?>;
+                padding-bottom: <?php echo $custom_padding_bottom ? $custom_padding_bottom . 'px' : '0'; ?>;
+                padding-left: <?php echo $custom_padding_left ? $custom_padding_left . 'px' : '0'; ?>;
 
-                border-top-left-radius:     <?php echo $custom_border_radius_top; ?>px;
-                border-top-right-radius:    <?php echo $custom_border_radius_right; ?>px;
-                border-bottom-right-radius: <?php echo $custom_border_radius_bottom; ?>px;
-                border-bottom-left-radius:  <?php echo $custom_border_radius_left; ?>px;
+                margin-top: <?php echo $custom_margin_top ? $custom_margin_top . 'px' : '0'; ?>;
+                margin-right: <?php echo $custom_margin_right ? $custom_margin_right . 'px' : '0'; ?>;
+                margin-bottom: <?php echo $custom_margin_bottom ? $custom_margin_bottom . 'px' : '0'; ?>;
+                margin-left: <?php echo $custom_margin_left ? $custom_margin_left . 'px' : '0'; ?>;
+
+                border-top: <?php echo $custom_border_top ? $custom_border_top . 'px' : '0'; ?>;
+                border-right: <?php echo $custom_border_right ? $custom_border_right . 'px' : '0'; ?>;
+                border-bottom: <?php echo $custom_border_bottom ? $custom_border_bottom . 'px' : '0'; ?>;
+                border-left: <?php echo $custom_border_left ? $custom_border_left . 'px' : '0'; ?>;
+                border-color: <?php echo $custom_border_color ? $custom_border_color : '#fff'; ?>;
+                border-style: <?php echo $custom_border_style ? $custom_border_style : 'solid'; ?>;
+
+                border-top-left-radius: <?php echo $custom_border_radius_top ? $custom_border_radius_top . 'px' : '0'; ?>;
+                border-top-right-radius: <?php echo $custom_border_radius_right ? $custom_border_radius_right . 'px' : '0'; ?>;
+                border-bottom-right-radius: <?php echo $custom_border_radius_bottom ? $custom_border_radius_bottom . 'px' : '0'; ?>;
+                border-bottom-left-radius: <?php echo $custom_border_radius_left ? $custom_border_radius_left . 'px' : '0'; ?>;
 
             }
             span.cacwp_text.index_<?php echo $index; ?>:hover {
-                background-color: <?php echo $custom_bg_hover_color; ?>;
-                color: <?php echo $custom_hover_color; ?>;
+                background-color: <?php echo $custom_bg_hover_color ? $custom_bg_hover_color : ''; ?>;
+                color: <?php echo $custom_hover_color ? $custom_hover_color : ''; ?>;
             }
         </style>
 

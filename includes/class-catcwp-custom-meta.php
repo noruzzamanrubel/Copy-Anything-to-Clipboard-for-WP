@@ -63,7 +63,7 @@ if( class_exists( 'CSF' ) ) {
           'type'        => 'color',
           'title' => __( 'Background Hover Color', 'catcwp' ),
           'output_mode' => 'background-color',
-          'default' => '#ffffff'
+          'default' => ''
         ),
         array(
           'id'      => 'copy_clipboard_color',
@@ -75,7 +75,7 @@ if( class_exists( 'CSF' ) ) {
           'id'      => 'copy_clipboard_hover_color',
           'type'    => 'color',
           'title'   => __( 'Hover Color', 'catcwp' ),
-          'default' => '#000000'
+          'default' => ''
         ),
         array(
           'id'               => 'copy_clipboard_padding',

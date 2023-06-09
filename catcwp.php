@@ -39,9 +39,14 @@ define( 'CATCWP_VERSION', '1.0.0' );
 define( 'CATCWP_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CATCWP_URL', plugin_dir_url( __FILE__ ) );
 define( 'CATCWP_NAME', 'catcwp' );
-define( 'CATCWP_FULL_NAME', 'Copy Anything to Clipboard for WP' );
+define( 'CATCWP_FULL_NAME', 'Copy to Clipboard for WordPress' );
 define( 'CATCWP_BASE_NAME', plugin_basename( __FILE__ ) );
 
+/**
+ * Initialize the plugin autoload
+ *
+ * @return void
+ */
 require __DIR__ . '/vendor/autoload.php';
 
 /**
@@ -69,7 +74,7 @@ appsero_init_tracker_copy_to_clipboard_for_wp();
  * The code that runs during plugin activation.
  * This action is documented in includes/class-catcwp-activator.php
  */
-function activate_catcwp() {
+function catcwp_activate() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-catcwp-activator.php';
 	Catcwp_Activator::activate();
 }
@@ -78,13 +83,13 @@ function activate_catcwp() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-catcwp-deactivator.php
  */
-function deactivate_catcwp() {
+function catcwp_deactivate() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-catcwp-deactivator.php';
 	Catcwp_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_catcwp' );
-register_deactivation_hook( __FILE__, 'deactivate_catcwp' );
+register_activation_hook( __FILE__, 'catcwp_activate' );
+register_deactivation_hook( __FILE__, 'catcwp_deactivate' );
 
 /**
  * The core plugin class that is used to define internationalization,
