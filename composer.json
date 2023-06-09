@@ -1,0 +1,19 @@
+{
+    "name": "noruzzaman/catcwp",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Noruzzaman\\Catcwp\\": "/"
+        }
+    },
+    "authors": [
+        {
+            "name": "noruzzamanrubel",
+            "email": "noruzzamanrubel@gmail.com"
+        }
+    ],
+    "require": {
+        "appsero/client": "^1.2"
+    }
+}
