@@ -8,10 +8,10 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Copy to Clipboard is a feature that allows users to copy content from a website or application and save it to their computer's clipboard.
+Copy to Clipboard for WordPress is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website. With just a few simple clicks, you can effortlessly enable your visitors to copy and paste content with ease. No more tedious manual selection or complicated keyboard shortcuts – just seamless copying at the click of a button!
 
 == Description ==
-**Copying to Clipboard: A Valuable Feature for WordPress Plugins**
+**Copy to Clipboard for WordPress** is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website. With just a few simple clicks, you can effortlessly enable your visitors to copy and paste content with ease. No more tedious manual selection or complicated keyboard shortcuts – just seamless copying at the click of a button!
 
 The **Copy to Clipboard for WordPress** feature is an invaluable tool that enhances user experience and productivity within websites and applications. With its ability to swiftly transfer content between various platforms, it has become an essential feature for WordPress plugins. In this article, we will explore the benefits and functionalities of the **Copy to Clipboard for WordPress** feature and its relevance for WordPress users.
 
