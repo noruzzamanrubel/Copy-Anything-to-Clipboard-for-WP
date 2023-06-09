@@ -43,6 +43,7 @@ define( 'CATCWP_FULL_NAME', 'Copy Anything to Clipboard for WP' );
 define( 'CATCWP_BASE_NAME', plugin_basename( __FILE__ ) );
 
 require __DIR__ . '/vendor/autoload.php';
+
 /**
  * Initialize the plugin tracker
  *
@@ -62,6 +63,7 @@ function appsero_init_tracker_copy_to_clipboard_for_wp() {
 }
 
 appsero_init_tracker_copy_to_clipboard_for_wp();
+
 
 /**
  * The code that runs during plugin activation.

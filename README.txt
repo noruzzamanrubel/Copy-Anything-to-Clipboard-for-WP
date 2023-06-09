@@ -33,9 +33,19 @@ Integrating the **Copy to Clipboard for WordPress** feature offers numerous adva
 
 In conclusion, the **Copy to Clipboard for WordPress** feature is a valuable tool that brings convenience, efficiency, and error reduction to WordPress users. By enabling seamless content transfer and promoting streamlined workflows, this feature enhances content sharing, increases productivity, and improves the overall user experience. Integrating the **Copy to Clipboard** functionality within WordPress plugins can significantly benefit users, making their interactions with websites and applications more seamless and efficient.
 
+## Privacy Policy
+
+Copy to Clipboard for WordPress plugin collects some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+
+Copy to Clipboard for WordPress plugin **does not gather any data by default.** The tracking SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
+
+Copy to Clipboard for WordPress plugin tracking SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
+
+Learn more about how [Copy to Clipboard for WordPress plugin collects and uses this data](https://appsero.com/privacy-policy/).
+
 == Installation ==
 
-There is no prerequisites for installing **Copy to Clipboard for WP**. You can follow the steps below to complete the installation.
+There is no prerequisites for installing **Copy to Clipboard for WordPress**. You can follow the steps below to complete the installation.
 
 = Automatic Installation =
 1.  Go to `Plugins > Add New` screen from your WordPress website dashboard.
