@@ -21,7 +21,9 @@ function catcwp_display_custom_shortcode_column($column) {
         $shortcode = '[copy_clipboard tag="' . $copy_clipboard_selector . '"]';
 
         // Output the shortcode with a click-to-copy functionality
-        echo '<div class="catcwp-shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';
+        echo '<div class="catcwp-shortcode-wrap">
+            <div class="selectable">' . esc_html($shortcode) . '</div>
+        </div>';
     }
 }
 
@@ -72,7 +74,9 @@ function catcwp_render_copy_to_clipboard_shortcode_metabox($post) {
         $shortcode = '[copy_clipboard tag="' . $copy_clipboard_selector . '"]';
 
         // Output the shortcode with a click-to-copy functionality
-        echo '<div class="catcwp-shortcode-wrap"><div class="selectable">' . esc_html($shortcode) . '</div></div>';
+        echo '<div class="catcwp-shortcode-wrap">
+            <div class="selectable">' . esc_html($shortcode) . '</div>
+        </div>';
     }
 }
 
