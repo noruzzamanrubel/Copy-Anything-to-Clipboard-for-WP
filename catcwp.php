@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://https://github.com/noruzzamanrubel
+ * @link              https://github.com/noruzzamanrubel
  * @since             1.0.0
  * @package           Catcwp
  *
  * @wordpress-plugin
  * Plugin Name:       Copy to Clipboard for WordPress, Copy to Clipboard for Elementor Addon
- * Plugin URI:        https://github.com/noruzzamanrubel/Copy-to-Clipboard-for-WP
+ * Plugin URI:        https://wordpress.org/plugins/copy-to-clipboard-for-wp/
  * Description:       Copy to Clipboard for WordPress is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website.
  * Version:           1.0.0
  * Author:            Noruzzaman
- * Author URI:        https://https://github.com/noruzzamanrubel
+ * Author URI:        https://github.com/noruzzamanrubel
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       catcwp
