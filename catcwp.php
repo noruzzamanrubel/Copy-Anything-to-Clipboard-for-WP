@@ -13,7 +13,7 @@
  * @package           Catcwp
  *
  * @wordpress-plugin
- * Plugin Name:       Copy to Clipboard for WordPress, Copy to Clipboard for Elementor Addon
+ * Plugin Name:       Copy to Clipboard for WordPress
  * Plugin URI:        https://wordpress.org/plugins/copy-to-clipboard-for-wp/
  * Description:       Copy to Clipboard for WordPress is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website.
  * Version:           1.0.0

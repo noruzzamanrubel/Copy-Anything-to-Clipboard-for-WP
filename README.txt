@@ -1,4 +1,4 @@
-=== Copy to Clipboard for WordPress, Copy to Clipboard for Elementor Addon ===
+=== Copy to Clipboard for WordPress ===
 Contributors: noruzzaman
 Tags: copy, Clipboard, copy to clipboard, paste, code snippets, Content Sharing, 
 Requires at least: 5.0
