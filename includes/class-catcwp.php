@@ -70,7 +70,7 @@ class Catcwp {
 		if ( defined( 'CATCWP_VERSION' ) ) {
 			$this->version = CATCWP_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.1.0';
 		}
 		$this->plugin_name = 'catcwp';
 

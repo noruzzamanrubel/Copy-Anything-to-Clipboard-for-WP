@@ -2,8 +2,8 @@
 Contributors: noruzzaman
 Tags: copy, Clipboard, copy to clipboard, paste, code snippets, Content Sharing, 
 Requires at least: 5.0
-Tested up to: 6.2
-Stable tag: 1.0.0
+Tested up to: 6.3
+Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,6 +43,14 @@ Copy to Clipboard for WordPress plugin tracking SDK **DOES NOT IMMEDIATELY** sta
 
 Learn more about how [Copy to Clipboard for WordPress plugin collects and uses this data](https://appsero.com/privacy-policy/).
 
+### 🚀 Check out our Other Plugins 🚀
+
+Here are some of our amazing plugins that you can use to boost your WordPress website:
+
+[Quick Checkout, Direct Checkout Button for WooCommerce](https://wordpress.org/plugins/quick-checkout-for-woocommerce/): Quick Checkout for WooCommerce is a powerful and efficient plugin designed to streamline the checkout process for online stores built on the WooCommerce platform.
+
+[Autocomplete Order Status for WooCommerce](https://wordpress.org/plugins/autocomplete-wc-order-status/): Enhance customer satisfaction, save time, and boost efficiency by seamlessly completing orders with this powerful WordPress plugin.
+
 == Installation ==
 
 There is no prerequisites for installing **Copy to Clipboard for WordPress**. You can follow the steps below to complete the installation.
@@ -61,3 +69,7 @@ Yes, it’s completely free.
 == Screenshots ==
 
 == Changelog ==
+
+= 1.1.0 =
+
+*New: support for WordPress 6.3
