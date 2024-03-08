@@ -42,32 +42,6 @@ define( 'CATCWP_NAME', 'catcwp' );
 define( 'CATCWP_FULL_NAME', 'Copy to Clipboard for WordPress' );
 define( 'CATCWP_BASE_NAME', plugin_basename( __FILE__ ) );
 
-/**
- * Initialize the plugin autoload
- *
- * @return void
- */
-require __DIR__ . '/vendor/autoload.php';
-
-/**
- * Initialize the plugin tracker
- *
- * @return void
- */
-function appsero_init_tracker_copy_to_clipboard_for_wp() {
-
-    if ( ! class_exists( 'Appsero\Client' ) ) {
-      require_once __DIR__ . '/appsero/src/Client.php';
-    }
-
-    $client = new Appsero\Client( 'ec4f0eda-958f-408c-b6a4-1c30d97663f4', 'Copy to Clipboard for WP', __FILE__ );
-
-    // Active insights
-    $client->insights()->init();
-
-}
-
-appsero_init_tracker_copy_to_clipboard_for_wp();
 
 
 /**
