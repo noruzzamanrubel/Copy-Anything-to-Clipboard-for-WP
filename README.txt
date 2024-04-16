@@ -2,13 +2,13 @@
 Contributors: noruzzaman
 Tags: copy, Clipboard, copy to clipboard, paste, code snippets
 Requires at least: 5.0
-Tested up to: 6.4
-Stable tag: 1.3.0
+Tested up to: 6.5.2
+Stable tag: 1.4.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Enhance Copy-Paste on WordPress with Our Plugin! Enable seamless content copying in just a few clicks. Say goodbye to manual selection and keyboard shortcuts. Download now for effortless copying!
+Copy to Clipboard for WordPress is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website.
 
 == Description ==
 **Copy to Clipboard for WordPress** is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website. With just a few simple clicks, you can effortlessly enable your visitors to copy and paste content with ease. No more tedious manual selection or complicated keyboard shortcuts – just seamless copying at the click of a button!
@@ -59,6 +59,9 @@ Yes, it’s completely free.
 == Screenshots ==
 
 == Changelog ==
+
+= 1.4.0 =
+Update: Enhanced compatibility with WordPress 6.5.2.
 
 = 1.3.0 =
 *Fix: Fix some minor issues.

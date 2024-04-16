@@ -38,15 +38,6 @@
                 // Remove the temporary element
                 $tempElement.remove();
 
-                // Update the text and style
-                // let originalText = $element.attr('data-text');
-                // $(this).text('Copied');
-                // $(this).css({
-                //     'color': 'green',
-                //     'cursor': 'pointer'
-                // });
-
-
                 // Apply the provided CSS styles to the existing element
                 let $copiedMessage = $('<div class="catcwp-after-copy-text">Copied to Clipboard!</div>');
                 $copiedMessage.css({
@@ -73,21 +64,6 @@
                 setTimeout(function () {
                     $copiedMessage.remove();
                 }, 2000);
-
-                // // Restore the original text and style after 2 seconds
-                // setTimeout(function() {
-                //     $(this).text(originalText);
-                //     $(this).css({
-                //         'color': '',
-                //         'cursor': 'pointer'
-                //     });
-                // }.bind(this), 2000);
-
-                // Restore the original text selection
-                // if (selected) {
-                //     document.getSelection().removeAllRanges();
-                //     document.getSelection().addRange(selected);
-                // }
             });
         });
 		  
