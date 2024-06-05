@@ -1,3 +1,7 @@
+= 1.5.0 =
+Update: Enhanced compatibility with WordPress 6.5.3
+Fix: some minor issues
+
 = 1.4.0 =
 Update: Enhanced compatibility with WordPress 6.5.2.
 
