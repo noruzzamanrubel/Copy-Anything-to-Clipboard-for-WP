@@ -18,7 +18,7 @@
  * Description:       Copy to Clipboard for WordPress is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website.
  * Version:           1.5.0
  * Author:            Noruzzaman
- * Author URI:        https://github.com/noruzzamanrubel
+ * Author URI:        https://github.com/noruzzamans
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       catcwp
