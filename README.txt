@@ -3,7 +3,7 @@ Contributors: noruzzaman, sanaf
 Tags: copy, Clipboard, copy to clipboard, paste, code snippets
 Requires at least: 5.0
 Tested up to: 6.7
-Stable tag: 1.7.0
+Stable tag: 1.8.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -63,6 +63,10 @@ Yes, it’s completely free.
 == Screenshots ==
 
 == Changelog ==
+
+= 1.8.0 =
+Update: Enhanced compatibility with WordPress 6.7
+Update: libraries updated
 
 = 1.7.0 =
 Update: Enhanced compatibility with WordPress 6.6.2

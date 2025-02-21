@@ -16,7 +16,7 @@
  * Plugin Name:       Copy to Clipboard for WordPress
  * Plugin URI:        https://wordpress.org/plugins/copy-to-clipboard-for-wp/
  * Description:       Copy to Clipboard for WordPress is a powerful and user-friendly plugin designed to enhance the copy-and-paste functionality on your WordPress website.
- * Version:           1.7.0
+ * Version:           1.8.0
  * Author:            Noruzzaman
  * Author URI:        https://github.com/noruzzamans
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'CATCWP_VERSION', '1.7.0' );
+define( 'CATCWP_VERSION', '1.8.0' );
 define( 'CATCWP_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CATCWP_URL', plugin_dir_url( __FILE__ ) );
 define( 'CATCWP_NAME', 'catcwp' );

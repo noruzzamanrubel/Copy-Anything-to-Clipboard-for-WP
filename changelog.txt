@@ -1,3 +1,7 @@
+= 1.8.0 =
+Update: Enhanced compatibility with WordPress 6.7
+Update: libraries updated
+
 = 1.7.0 =
 Update: Enhanced compatibility with WordPress 6.6.2
 
